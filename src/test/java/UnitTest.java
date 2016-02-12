@@ -3,9 +3,12 @@ import static org.junit.Assert.*;
 
 public class UnitTest {
 
-  @Rule
-  public DatabaseRule database = new DatabaseRule();
+  @Test
+  public void vowelReplacer_aEqualsDash_a() {
+    App testApp = new App();
+    assertEquals("-", testApp.vowelReplacer(a));
+  }
 
-  //Tests go here
+
 
 }

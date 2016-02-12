@@ -1,1 +1,4 @@
-## For plain English specs
+## Plain English specs
+
+## Function accepts string argument, replaces "a" with dash, outputs result
+## Function accepts string argument, replaces all values with dash, outputs result
