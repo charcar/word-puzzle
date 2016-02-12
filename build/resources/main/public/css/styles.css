@@ -1,3 +1,11 @@
+.jumbotron {
+  background-blend-mode: darken;
+}
+
+body {
+  background-image: url("../imgs/happypark.png")
+}
+
 p {
   font-family: monospace;
 }
@@ -5,9 +13,10 @@ p {
 h1 {
   font-weight: bold;
   font-size: 2em;
+
 }
 
 .btn:hover {
   color: white;
-
+  font-style: italic;
 }
