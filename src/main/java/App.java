@@ -14,6 +14,16 @@ public class App {
           return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
 
+        get("/results", (request, response) -> {
+          HashMap<String, Object> model = new HashMap<String, Object>();
+          model.put("template", "templates/results.vtl");
+
+          String userinput = request.queryParams("input");
+          String inputVowelRemoved = vowelReplacer(userinput);
+          model.put("inputVowelRemoved", inputVowelRemoved);
+          return new ModelAndView(model, layout);
+        }, new VelocityTemplateEngine());
+
 
     }
 
@@ -23,15 +33,15 @@ public class App {
 
       for (int i = 0; i < userStringArray.length; i++) {
         if (userStringArray[i].contains("a")) {
-          replaceWithDashes += "-";
+          replaceWithDashes += " - ";
         } else if (userStringArray[i].toLowerCase().contains("e")) {
-          replaceWithDashes += "-";
+          replaceWithDashes += " - ";
         } else if (userStringArray[i].toLowerCase().contains("i")) {
-          replaceWithDashes += "-";
+          replaceWithDashes += " - ";
         } else if (userStringArray[i].toLowerCase().contains("o")) {
-          replaceWithDashes += "-";
+          replaceWithDashes += " - ";
         } else if (userStringArray[i].toLowerCase().contains("u")) {
-          replaceWithDashes += "-";
+          replaceWithDashes += " - ";
         } else {
           replaceWithDashes += userStringArray[i];
         }

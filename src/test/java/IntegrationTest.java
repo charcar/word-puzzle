@@ -20,7 +20,13 @@ public class IntegrationTest extends FluentTest {
   @Test
   public void rootTest() {
     goTo("http://localhost:4567/");
-    assertThat(pageSource()).contains("Put some words");
+    assertThat(pageSource()).contains("put some words");
+  }
+
+  @Test
+  public void resultsTest() {
+    goTo("http://localhost:4567/results?input='hello'");
+    assertThat(pageSource()).contains("hopefully they");
   }
 
 }
