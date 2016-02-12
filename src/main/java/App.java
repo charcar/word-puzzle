@@ -1,5 +1,4 @@
 import java.util.HashMap;
-
 import spark.ModelAndView;
 import spark.template.velocity.VelocityTemplateEngine;
 import static spark.Spark.*;
@@ -8,6 +7,12 @@ public class App {
     public static void main(String[] args) {
         staticFileLocation("/public");
         String layout = "templates/layout.vtl";
+
+        get("/", (request, response) -> {
+          HashMap<String, Object> model = new HashMap<String, Object>();
+          model.put("template", "templates/home.vtl");
+          return new ModelAndView(model, layout);
+        }, new VelocityTemplateEngine());
 
 
     }
@@ -46,3 +51,5 @@ public class App {
 
 // TEST 2, make two arrays of Strings, test equality, still running into issue with nested for loops that is completely throwing off output.
 // String[] vowels = {"a", "e", "i", "o", "u"};
+
+// TEST 3, how to refactor? I know that I could have done this entire challenge using String operators and a regex statement, however I wanted to use a for loop. I know that the long if/else conditional can be refactored, I'm just not sure how to go about.. I thought I could have done something with comparing the two (first char, then string) arrays.. but then I settled on this approach b/c I couldn't figure out how to get out of nested for loops..
