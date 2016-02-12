@@ -1,0 +1,14 @@
+p {
+  font-family: monospace;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 2em;
+
+}
+
+.btn:hover {
+  color: white;
+  font-style: italic;
+}
