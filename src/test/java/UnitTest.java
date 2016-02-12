@@ -9,6 +9,18 @@ public class UnitTest {
     assertEquals("-", testApp.vowelReplacer("a"));
   }
 
+  @Test
+  public void vowelReplacer_bEqualsb_b() {
+    App testApp = new App();
+    assertEquals("b", testApp.vowelReplacer("b"));
+  }
+
+  @Test
+  public void vowelReplacer_stringHasVowelsReplacedByDash_interesting() {
+    App testApp = new App();
+    assertEquals("-nt-r-st-ng", testApp.vowelReplacer("interesting"));
+  }
+
 
 
 }

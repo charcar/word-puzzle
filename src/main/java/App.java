@@ -13,30 +13,32 @@ public class App {
     }
 
     public static String vowelReplacer(String userInput) {
-      char[] userCharArray = userInput.toCharArray();
-      char[] vowels = {'a', 'e', 'i', 'o', 'u'};
+      String[] userStringArray = userInput.split("");
+      String[] vowels = {"a", "e", "i", "o", "u"};
 
-      char[] replacedCharArray = {};
       String replaceWithDashes = "";
 
 
           // loop through char array of userInput String
-      for (int i = 0; i < userCharArray.length; i++) {
-          // loop through vowel char array, look for matches
-        for (int v = 0; v < vowels.length ; v++) {
-
-          if (vowels[v] == userCharArray[i]) {
-            replaceWithDashes += '-';
-            break;
-          } else {
-            replaceWithDashes += userCharArray[i];
-            break;
-
-          }
+      for (int i = 0; i < userStringArray.length; i++) {
+        if (userStringArray[i].contains("a")) {
+          replaceWithDashes += "-";
+        } else if (userStringArray[i].contains("e")) {
+          replaceWithDashes += "-";
+        } else if (userStringArray[i].contains("i")) {
+          replaceWithDashes += "-";
+        } else if (userStringArray[i].contains("o")) {
+          replaceWithDashes += "-";
+        } else if (userStringArray[i].contains("u")) {
+          replaceWithDashes += "-";
+        } else {
+          replaceWithDashes += userStringArray[i];
         }
       } return replaceWithDashes;
     }
-}
+  }
+
+
 
 // TEST 1, try to loop through charArray and compare to HashMap
 // HashMap<Character, String> vowelToDash = new HashMap<Character, String>();
