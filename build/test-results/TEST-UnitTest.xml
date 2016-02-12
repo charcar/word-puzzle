@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="UnitTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2016-02-12T20:13:12" hostname="xanadus-MacBook-Air.local" time="0.003">
+<testsuite name="UnitTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2016-02-12T20:27:41" hostname="xanadus-MacBook-Air.local" time="0.003">
   <properties/>
   <testcase name="vowelReplacer_bEqualsb_b" classname="UnitTest" time="0.002"/>
   <testcase name="vowelReplacer_aEqualsDash_a" classname="UnitTest" time="0.0"/>

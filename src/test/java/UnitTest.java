@@ -18,7 +18,7 @@ public class UnitTest {
   @Test
   public void vowelReplacer_stringHasVowelsReplacedByDash_interesting() {
     App testApp = new App();
-    assertEquals("-nt-r-st-ng", testApp.vowelReplacer("interesting"));
+    assertEquals("-nt-R-st-ng r--d H-r-", testApp.vowelReplacer("inteResting rEad Here"));
   }
 
 

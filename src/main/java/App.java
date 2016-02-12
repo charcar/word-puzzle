@@ -14,22 +14,18 @@ public class App {
 
     public static String vowelReplacer(String userInput) {
       String[] userStringArray = userInput.split("");
-      String[] vowels = {"a", "e", "i", "o", "u"};
-
       String replaceWithDashes = "";
 
-
-          // loop through char array of userInput String
       for (int i = 0; i < userStringArray.length; i++) {
         if (userStringArray[i].contains("a")) {
           replaceWithDashes += "-";
-        } else if (userStringArray[i].contains("e")) {
+        } else if (userStringArray[i].toLowerCase().contains("e")) {
           replaceWithDashes += "-";
-        } else if (userStringArray[i].contains("i")) {
+        } else if (userStringArray[i].toLowerCase().contains("i")) {
           replaceWithDashes += "-";
-        } else if (userStringArray[i].contains("o")) {
+        } else if (userStringArray[i].toLowerCase().contains("o")) {
           replaceWithDashes += "-";
-        } else if (userStringArray[i].contains("u")) {
+        } else if (userStringArray[i].toLowerCase().contains("u")) {
           replaceWithDashes += "-";
         } else {
           replaceWithDashes += userStringArray[i];
@@ -48,7 +44,5 @@ public class App {
 //     vowelToDash.put('o', "-");
 //     vowelToDash.put('u', "-");
 
-//   // if value is vowel, insert Dash or append original char
-// if (eachChar = )
-//
-// append.scoreHash.get(eachChar);
+// TEST 2, make two arrays of Strings, test equality, still running into issue with nested for loops that is completely throwing off output.
+// String[] vowels = {"a", "e", "i", "o", "u"};
