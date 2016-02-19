@@ -31,15 +31,15 @@ public class App {
 
       for (int i = 0; i < userStringArray.length; i++) {
         if (userStringArray[i].contains("a")) {
-          replaceWithDashes += " - ";
+          replaceWithDashes += "-";
         } else if (userStringArray[i].toLowerCase().contains("e")) {
-          replaceWithDashes += " - ";
+          replaceWithDashes += "-";
         } else if (userStringArray[i].toLowerCase().contains("i")) {
-          replaceWithDashes += " - ";
+          replaceWithDashes += "-";
         } else if (userStringArray[i].toLowerCase().contains("o")) {
-          replaceWithDashes += " - ";
+          replaceWithDashes += "-";
         } else if (userStringArray[i].toLowerCase().contains("u")) {
-          replaceWithDashes += " - ";
+          replaceWithDashes += "-";
         } else {
           replaceWithDashes += userStringArray[i];
         }
